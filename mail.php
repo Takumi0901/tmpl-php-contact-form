@@ -17,28 +17,45 @@
         <div class="c-container">
           <h1>PHP Contact Form Template</h1>
         </div>
-        <form class="c-form" action="./check.php" method="post">
+        <form class="js-form c-form" action="./check.php" method="post">
           <div class="c-container">
             <table class="c-table c-table--basic">
               <tr>
                 <th>Name</th>
-                <td><input type="text" name="name" value=""></td>
+                <td>
+                  <div class="c-form__input-box">
+                    <input class="js-validate" type="text" name="name" value="" data-required="true">
+                    <div class="c-form__input-box__alert"></div>
+                  </div>
+                </td>
               </tr>
               <tr>
                 <th>Mail</th>
-                <td><input type="email" name="mail" value=""></td>
+                <td>
+                  <div class="c-form__input-box">
+                    <input class="js-validate" type="email" name="mail" value="" data-required="true" data-mail="true">
+                    <div class="c-form__input-box__alert"></div>
+                  </div>
+                </td>
               </tr>
 
               <tr>
                 <th>Comment</th>
-                <td><textarea name="comment" id="" cols="30" rows="10"></textarea></td>
+                <td>
+                  <div class="c-form__input-box">
+                    <textarea class="js-validate" name="comment" id="" cols="30" rows="10" data-required="true"></textarea>
+                    <div class="c-form__input-box__alert"></div>
+                  </div>
+                </td>
               </tr>
             </table>
           </div>
-          <p class="c-container u-ta-c"><button class="c-btn c-btn--primary c-btn--large c-btn--block" type="submit">Confirm!</button></p>
+          <p class="c-container u-ta-c"><button class="js-submit c-btn c-btn--primary c-btn--large c-btn--block" type="button">Confirm!</button></p>
         </form>
       </div>
     </div>
   </div>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/validate.js"></script>
 </body>
 </html>
